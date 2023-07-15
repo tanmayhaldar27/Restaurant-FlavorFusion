@@ -22,7 +22,7 @@ function getMenu() {
         foodItem.appendChild(name);
         foodItem.appendChild(price);
         foodItem.appendChild(addButton);
-        
+
         // Insert the items at the 26th and 27th positions
         if (index === 0) {
           foodGrid.appendChild(foodItem);
@@ -152,4 +152,10 @@ window.onload = () => {
   getMenu();
   handleSearchInput();
   handlePromises();
+
+  // Add event listener to the Login button
+  const loginButton = document.getElementById('login-button');
+  loginButton.addEventListener('click', () => {
+    thankyouFnc();
+  });
 };
